@@ -4,15 +4,16 @@ import EmailComposer from './components/EmailComposer.jsx';
 
 function App() {
   return (
+    /* The outer container uses 'flex' to place Sidebar and Main side-by-side */
     <div className="flex min-h-screen bg-charcoal text-zinc-100 font-sans selection:bg-jazzGold selection:text-black">
       
-      {/* 1. Fixed Sidebar */}
+      {/* 1. Sidebar - This component should have a fixed width (e.g., w-64) */}
       <Sidebar />
 
-      {/* 2. Main Scrollable Content Area */}
+      {/* 2. Main Workspace - Takes up the remaining horizontal space */}
       <main className="flex-1 h-screen overflow-y-auto bg-[#0f0f0f] flex flex-col items-center">
         
-        {/* Top Header Section */}
+        {/* Dashboard Header */}
         <header className="w-full max-w-5xl px-10 pt-10 pb-6 flex justify-between items-end">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
@@ -32,13 +33,13 @@ function App() {
           </div>
         </header>
 
-        {/* 3. The Central Workspace (Email Composer) */}
+        {/* The Central Work Area */}
         <section className="w-full max-w-5xl px-10 pb-20">
           <div className="w-full">
             <EmailComposer />
           </div>
 
-          {/* Optional: Future home of the Recipient Table */}
+          {/* Recipient Table Placeholder */}
           <div className="mt-8 p-6 border border-dashed border-zinc-800 rounded-lg flex flex-col items-center justify-center opacity-50 hover:opacity-100 transition-opacity">
              <p className="text-zinc-500 text-xs uppercase tracking-widest">Upcoming Feature</p>
              <p className="text-zinc-400 text-sm mt-1 font-medium">Recipient Data Grid (CSV/Google Sheets)</p>
